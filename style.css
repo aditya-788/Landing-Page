@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;700;900&family=Raleway:wght@300;400;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landing-page{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url(./image/back6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff87;
+    padding-right: 3%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11%;
+    min-width: 20%;
+    height: 70px;
+    width: 80%;
+    align-items: center;
+}
+.home-nav{
+    color: #000;
+    font-family: 'montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: x-large;
+}
+.home-nav:hover{
+    border-bottom: none;
+}
+.navbar .nav-links{
+    color: #000;
+    font-family: 'montserrat', sans-serif;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding: 1px 0;
+    transition: 0.3s;
+}
+.navbar .nav-links:hover{
+    border-bottom: 3px solid #ff3c78;
+    
+}
+.search-bar{
+    width: 240px;
+    height: 25px;
+    background: #ff3c78;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+}
+.search-icon{
+    color: #fff;
+    margin: 0 4%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.search-bar input{
+    border: none;
+    background-color: #ff3c78;
+    color: #fff;
+    outline: none;
+    width: 75%;
+    height: 25px;
+}
+.search::placeholder{
+    float: right;
+    color: #fff;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 10.5%;
+    width: 100%;
+}
+.heading{
+    color: #000;
+    font-family: 'montserrat',sans-serif;
+    font-size: 70px;
+    margin-top: -40px;
+}
+.heading3 {
+    color: #000;
+    line-height: 0;
+    margin-left: 2%;
+    font-family: 'montserrat',sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.paragraph{
+    color: #000;
+    font-family: 'dancing script',cursive;
+    font-size: 30px;
+}
+.explore{
+    background-color: #ff3c78;
+    position: absolute;
+    border: none;
+    align-items: center;
+    width: 185px;
+    height: 40px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.explore a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'montserrat',sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+#mobile-pic{
+    display: none;
+}
+.img-container{
+    margin-top: 50px;
+}
+.img-container img{
+    width: 290px;
+    height: 400px;
+    box-shadow: 0 0 1px #fff;
+    border: 15px solid rgba(228, 218, 218, 0.354);
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 32px;
+}
+.close-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.mobile-menu a {
+    padding: 15px;
+    text-align: center;
+    color: #000;
+    font-family: 'montserrat',sans-serif;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+.mobile-menu a:hover {
+    background-color: #ff3c78;
+    color: #fff;
+}
+
+
+
+/*-------------------------------------------Media Queries------------------------------------------*/
+@media only screen and (max-width: 640px) {
+    header{
+        padding: 0 4%;
+        margin-top: 0;
+        height: 50px;
+    }
+    .navbar {
+        display: none;
+    }
+    .search-bar{
+        width: 180px;
+        height: 28px;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+        top: 0;
+    }
+    .content{
+        padding: 9% 3.2%;
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 2.3em;
+        margin-top: -15px;
+    }
+    .heading3 {
+        margin-left: 2%;
+        font-weight: 400;
+        font-size: 0.8em;
+        margin-bottom: 8%;
+    }
+    .paragraph{
+        font-size: 1em;
+    }
+    .explore{
+        width: 185px;
+        height: 40px;
+        bottom: 15px;
+    }
+    .explore a{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .lap-pic{
+        display: none;
+    }
+    #mobile-pic{
+        display: block;
+    }
+    .img-container{
+        margin-top: 50px;
+    }
+    .img-container #mobile-pic{
+        position: relative;
+        bottom: 35px;
+        width: 350px;
+        height: 185px;
+        border: 10px solid rgba(228, 218, 218, 0.354);
+    }
+}
+@media only screen and (min-width:640px) and (max-width: 768px) {
+    header{
+        padding-right: 1.5%;
+    }
+    .navbar{
+        padding: 0 8% 0 3%;
+    }
+    .navbar .nav-links{
+        font-size: 0.8em;
+    }
+    .content{
+        padding: 9% 3.2%;
+    }
+    .heading{
+        font-size: 2.8em;
+        margin-top: -60px;
+    }
+    .heading3 {
+        margin-left: 2%;
+        font-weight: 400;
+        font-size: 0.8em;
+        margin-bottom: 8%;
+    }
+    .paragraph{
+        font-size: 1em;
+    }
+    .explore{
+        width: 185px;
+        height: 40px;
+        margin-top: 40px;
+    }
+    .explore a{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .img-container{
+        margin-top: 50px;
+    }
+    .img-container img{
+        width: 230px;
+        height: 330px;
+        border: 10px solid rgba(228, 218, 218, 0.354);
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    header {
+        padding-right: 2%;
+    }
+    .navbar {
+        padding: 0 10% 0 3%;
+    }
+    .content{
+        padding: 2% 3%;
+    }
+    .heading {
+        font-size: 3em;
+    }
+    .heading3 {
+        font-size: 0.85em;
+    }
+    .paragraph {
+        font-size: 1.25em;
+    }
+    .img-container img {
+        width: 250px;
+        height: 350px;
+    }
+}
